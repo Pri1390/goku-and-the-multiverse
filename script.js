@@ -1,5 +1,8 @@
 const goku = document.querySelector(".goku");
 const portal = document.querySelector(".portal");
+const start = document.getElementById("start");
+const btnStart = document.querySelector(".btnStart");
+const gameBoard = document.querySelector(".game-board");
 
 
 //adiciona e remove o pulo
@@ -38,3 +41,13 @@ const loop = setInterval(() =>{
 }, 10);
 
 document.addEventListener("keydown", jump);
+
+btnStart.addEventListener("click",function(){
+  
+    start.classList.remove("show");
+    start.classList.add("hidden");
+    gameBoard.classList.remove("hidden");
+    gameBoard.classList.add("show");
+    
+  })
+
