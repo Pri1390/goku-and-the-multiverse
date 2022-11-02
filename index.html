@@ -10,7 +10,7 @@
 <body>
      <!-- TELA DE START-->
      <div id="start" class="start-screen show">
-        <audio src="./sounds/oi-eu-sou-o-goku.mp3" preload="auto" autoplay></audio>         
+                
              
         <h1>Goku e o Multiverso</h1>
         <h2>Ajude o  Goku a escapar dos portais!</h2>
@@ -20,6 +20,7 @@
 
         <h4>Vamos começar!</h4>        
         <button id="btnStart" class="btnStart"> Iniciar</button>
+        <audio src="./sounds/oi-eu-sou-o-goku.mp3" autoplay  class="audio"></audio> 
     </div>
 
 
@@ -33,13 +34,9 @@
     
      <!-- TELA GAME OVER-->
      <div id="modalgameover" class="game-over-screen hidden">
-        <h1>😭 FIM DE JOGO!😭</h1>
-        
-        
-        <!--<button class="btnRestart"> Reiniciar</button>-->
+        <h1>😭 FIM DE JOGO!😭</h1>      
+        <button class="btnVoltar"> Voltar</button>
     </div>
-
-
 
     <script src="./script.js"></script>
 </body>
