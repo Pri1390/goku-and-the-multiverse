@@ -3,6 +3,7 @@ const portal = document.querySelector(".portal");
 const start = document.getElementById("start");
 const btnStart = document.querySelector(".btnStart");
 const gameBoard = document.querySelector(".game-board");
+const modalGameOver = document.getElementById("modalgameover");
 
 
 //adiciona e remove o pulo
@@ -33,14 +34,18 @@ const loop = setInterval(() =>{
 // muda a imgem para o Ricky
         goku.src ="./images/ricky.gif";
 
+
+        gameOver();
+
         clearInterval(loop);
        
 
     }
 
 }, 10);
-
+// evento de clicar e apertar tela
 document.addEventListener("keydown", jump);
+document.addEventListener("click", jump);
 
 btnStart.addEventListener("click",function(){
   
@@ -49,5 +54,12 @@ btnStart.addEventListener("click",function(){
     gameBoard.classList.remove("hidden");
     gameBoard.classList.add("show");
     
-  })
+  });
+
+// Fim de jogo
+function gameOver() {
+  modalGameOver.classList.remove("hidden");
+  modalGameOver.classList.add("show");
+
+}
 
