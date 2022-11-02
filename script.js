@@ -6,6 +6,8 @@ const gameBoard = document.querySelector(".game-board");
 const modalGameOver = document.getElementById("modalgameover");
 
 
+
+
 //adiciona e remove o pulo
 const jump = () => {
     goku.classList.add("jump");
@@ -15,7 +17,9 @@ const jump = () => {
         goku.classList.remove("jump");
 
     },500);
-}
+
+    //jumpSound.play();
+};
 
 // quando ocorre a colisão
 const loop = setInterval(() =>{
@@ -47,19 +51,35 @@ const loop = setInterval(() =>{
 document.addEventListener("keydown", jump);
 document.addEventListener("click", jump);
 
+// toca o audio
+
+const backgroundSound = new Audio();
+backgroundSound.src ="./sounds/DragonballZ-Abertura.mp3";
+
+const jumpSound = new Audio();
+jumpSound.src = "./sounds/goku-pulando.mp3";
+
+const gameOverSound = new Audio();
+gameOverSound.src = "./sounds/gameover.mp3";
+
+
+
 btnStart.addEventListener("click",function(){
   
     start.classList.remove("show");
     start.classList.add("hidden");
     gameBoard.classList.remove("hidden");
     gameBoard.classList.add("show");
-    
+    backgroundSound.play();
+
   });
 
 // Fim de jogo
 function gameOver() {
-  modalGameOver.classList.remove("hidden");
-  modalGameOver.classList.add("show");
+    modalGameOver.classList.remove("hidden");
+    modalGameOver.classList.add("show");
+    backgroundSound.pause();
+    gameOverSound.play();
 
 }
 
