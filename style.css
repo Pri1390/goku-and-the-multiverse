@@ -15,6 +15,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-size: 105% 100%;
+    overflow: hidden
 }
 
 .start-screen h1 {
@@ -41,7 +42,8 @@
     font-weight: 900;
     font-size: 1.7rem;
     font-style: italic;
-    color: rgb(49, 12, 12);
+    color:rgb(128, 18, 18);
+    border-color:black;
 }
 
 
@@ -56,6 +58,8 @@
     font-weight: 800;
     font-style: italic;
     text-decoration: underline;
+    color:rgb(128, 18, 18);
+    border-color:black;
    
 
 }
@@ -67,6 +71,8 @@
     font-family: "Alfa Slab One", sans-serif; 
     font-size: 2rem;
     font-weight: 800;
+    color:rgb(128, 18, 18);
+    border-color:black;
 }
 
 .start-screen p {
@@ -75,6 +81,8 @@
     font-size: 22px;
     font-family: "Alfa Slab One", sans-serif;
     font-weight: 600;
+    color:rgb(128, 18, 18);
+    border-color:black;
 }
 
 .btnStart {
@@ -146,6 +154,7 @@
     font-size: 3rem;   
     font-weight: bolder;
     font-family: "Roboto Slab", serif; 
+    overflow: hidden
    
     }
 
